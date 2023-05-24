@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('survey-creator');
 });
 
 Route::get('/surveyjs', function () {
