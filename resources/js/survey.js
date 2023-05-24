@@ -1,32 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const surveyJson = {
-        logoPosition: "right",
-        pages: [
-            {
-                name: "Página1",
-                elements: [
-                    {
-                        type: "pais",
-                        name: "Pregunta1",
-                    },
-                    {
-                        type: "direccionenvio",
-                        name: "Pregunta2",
-                    },
-                ],
-            },
-        ],
-    };
+    const element = document.getElementById("surveyView");
 
-    const survey = new Survey.Model(surveyJson);
+    if (typeof element != "undefined" && element != null) {
+        const surveyJson = {
+            logoPosition: "right",
+            pages: [
+                {
+                    name: "Página1",
+                    elements: [
+                        {
+                            type: "pais",
+                            name: "Pregunta1",
+                        },
+                        {
+                            type: "direccionenvio",
+                            name: "Pregunta2",
+                        },
+                    ],
+                },
+            ],
+        };
 
-    ko.applyBindings({
-        model: survey,
-    });
+        const survey = new Survey.Model(surveyJson);
 
-    function alertResults(sender) {
-        const results = JSON.stringify(sender.data);
-        alert(results);
+        ko.applyBindings({
+            model: survey,
+        });
+
+        function alertResults(sender) {
+            const results = JSON.stringify(sender.data);
+            alert(results);
+        }
+        survey.onComplete.add(alertResults);
     }
-    survey.onComplete.add(alertResults);
 });

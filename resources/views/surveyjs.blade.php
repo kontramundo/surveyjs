@@ -16,6 +16,6 @@
 
     </head>
     <body style="background-color: #f3f3f3">
-        <survey params="survey: model"></survey>
+        <survey params="survey: model" id="surveyView"></survey>
     </body>
 </html>
