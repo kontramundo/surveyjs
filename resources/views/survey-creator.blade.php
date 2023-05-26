@@ -16,6 +16,9 @@
         <script type="text/javascript" src="{{asset('surveyjs/survey.i18n.js')}}"></script>
         <script type="text/javascript" src="{{asset('surveyjs/survey-creator-core.i18n.js')}}"></script>
 
+        {{-- <script type="text/javascript" src="{{asset('surveyjs/shadown.js')}}"></script>
+        <script type="text/javascript" src="{{asset('surveyjs/survey-widgets.js')}}"></script>
+        <script type="text/javascript" src="{{asset('ckeditor/ckeditor.js')}}"></script> --}}
 
     </head>
     <body class="antialiased">
